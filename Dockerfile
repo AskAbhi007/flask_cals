@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy app code and environment
-COPY app/ /app/
+COPY flask_calculator/app/ /app/
 COPY requirements.txt .
 
 # Install dependencies
