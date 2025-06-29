@@ -39,7 +39,7 @@ jobs:
       id: task-def
       run: |
         TASK_DEF_ARN=$(aws ecs register-task-definition \
-          --cli-input-json file://flask_cals_task-revision1-AWS-CLI-input.json \
+          --cli-input-json file://flask_calculator/flask_cals_task-revision1-AWS-CLI-input.json \
           --query 'taskDefinition.taskDefinitionArn' \
           --output text)
         echo "task_definition_arn=$TASK_DEF_ARN" >> $GITHUB_OUTPUT
